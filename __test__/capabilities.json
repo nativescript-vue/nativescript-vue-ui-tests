@@ -1,0 +1,14 @@
+{
+  "android": {
+    "platformName": "Android",
+    "platformVersion": "7.1",
+    "deviceName": "Android Emulator",
+    "app": ""
+  },
+  "ios": {
+    "platformName": "iOS",
+    "platformVersion": "7.1",
+    "deviceName": "Android Emulator",
+    "app": ""
+  }
+}
