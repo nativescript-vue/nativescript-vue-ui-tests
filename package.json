@@ -1,22 +1,41 @@
 {
-	"description": "NativeScript-Vue UI test application",
-	"license": "MIT",
-	"readme": "NativeScript-Vue UI test application",
-	"repository": "<fill-your-repository-here>",
-	"nativescript": {
-		"id": "org.nativescript.nativescriptvueuitests",
-		"tns-android": {
-			"version": "3.2.0"
-		}
-	},
-	"dependencies": {
-		"nativescript-vue": "^0.1.12",
-		"tns-core-modules": "^3.2.0"
-	},
-	"devDependencies": {
-		"babel-traverse": "6.26.0",
-		"babel-types": "6.26.0",
-		"babylon": "6.18.0",
-		"lazy": "1.0.11"
-	}
+  "description": "NativeScript-Vue UI test application",
+  "license": "MIT",
+  "readme": "NativeScript-Vue UI test application",
+  "repository": "<fill-your-repository-here>",
+  "nativescript": {
+    "id": "org.nativescript.nativescriptvueuitests",
+    "tns-android": {
+      "version": "3.2.0"
+    }
+  },
+  "dependencies": {
+    "nativescript-vue": "^0.1.12",
+    "tns-core-modules": "^3.2.0"
+  },
+  "devDependencies": {
+    "appium": "^1.7.1",
+    "babel-traverse": "6.26.0",
+    "babel-types": "6.26.0",
+    "babylon": "6.18.0",
+    "jest": "^21.2.1",
+    "lazy": "1.0.11",
+    "wd": "^1.4.1"
+  },
+  "scripts": {
+    "appium": "appium",
+    "test": "jest"
+  },
+  "jest": {
+    "setupFiles": [
+      "./__test__/setup.js"
+    ],
+    "testPathIgnorePatterns": [
+      "/platforms/",
+      "/node_modules/"
+    ],
+    "modulePathIgnorePatterns": [
+      "/platforms/"
+    ]
+  }
 }
