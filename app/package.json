@@ -1,0 +1,8 @@
+{
+  "android": {
+    "v8Flags": "--expose_gc"
+  },
+  "main": "app.js",
+  "name": "nativescript-vue-ui-tests",
+  "version": "3.2.0"
+}
