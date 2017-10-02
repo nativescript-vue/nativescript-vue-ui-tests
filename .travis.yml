@@ -9,7 +9,7 @@ env:
     - ANDROID_PACKAGE='nativescriptvueuitests-debug.apk'
     - ANDROID_PACKAGE_FOLDER=$TRAVIS_BUILD_DIR/platforms/android/build/outputs/apk
     - ANDROID_SAUCE_STORAGE='https://saucelabs.com/rest/v1/storage/$SAUCE_USER/$ANDROID_PACKAGE?overwrtie=true'
-    - IOS_PACAKAGE='nativescriptvueuitests.zip'
+    - IOS_PACKAGE='nativescriptvueuitests.zip'
     - IOS_PACKAGE_FOLDER=$TRAVIS_BUILD_DIR/platforms/ios/build/emulator
     - IOS_SAUCE_STORAGE='https://saucelabs.com/rest/v1/storage/$SAUCE_USER/$IOS_PACKAGE?overwrite=true'
 
