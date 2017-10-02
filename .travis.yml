@@ -61,7 +61,7 @@ matrix:
       jdk: oraclejdk8
       script:
         - npm run ci.ios.build
-        - cd $IOS_PACKAGE_FOLDER && ls -al $IOS_PACKAGE && zip -r $IOS_PACKAGE nativescriptvueuitests.app/
+        - cd $IOS_PACKAGE_FOLDER && ls -al && zip -r $IOS_PACKAGE nativescriptvueuitests.app/
         - "curl -u $SAUCE_USER:$SAUCE_KEY -X POST -H 'Content-Type: application/octet-stream' $IOS_SAUCE_STORAGE --data-binary @$IOS_PACKAGE_FOLDER/$IOS_PACKAGE"
     - stage: "Screenshots"
       env:
