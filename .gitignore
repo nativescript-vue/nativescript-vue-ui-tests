@@ -2,4 +2,3 @@ package-lock.json
 node_modules
 platforms/
 screenshots/
-!screenshots/.gitkeep
