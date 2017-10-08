@@ -5,7 +5,7 @@ git config --global user.name "Travis CI"
 
 git checkout -b gh-pages
 git add -f screenshots
-git commit --message "Travis deploy: $TRAVIS_BUILD_NUMBER"
+git commit --message "Travis deploy: $TRAVIS_JOB_NUMBER"
 
 git remote add origin-pages https://${GITHUB_TOKEN}@github.com/rigor789/nativescript-vue-ui-tests.git > /dev/null 2>&1
-git push --quiet --set-upstream --force origin-pages gh-pages
+git push --force origin-pages gh-pages
