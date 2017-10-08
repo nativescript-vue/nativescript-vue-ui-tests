@@ -33,11 +33,11 @@
   },
   "scripts": {
     "test": "jest",
-    "appium": "nativescript-dev-appium",
+    "appium": "node generate-screenshots.js",
     "ci.android.build": "tns build android",
-    "ci.android.screenshots": "npm run appium --runtype=android23",
+    "ci.android.screenshots": "npm run appium --runtype=android23 --sauceLab=true",
     "ci.ios.build": "tns build ios",
-    "ci.ios.screenshots": "npm run appium --runtype=ios-simulator103iPhone6"
+    "ci.ios.screenshots": "npm run appium --runtype=ios-simulator103iPhone6 --sauceLab=true"
   },
   "jest": {
     "testPathIgnorePatterns": [
