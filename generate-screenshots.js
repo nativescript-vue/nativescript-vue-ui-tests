@@ -44,7 +44,7 @@ const run = async (driver) => {
 };
 
 const screenshotComponent = async (driver, component) => {
-  console.log(`>>>>> ${component} >>>>>`);
+  console.log(`[${argv.runType}] >>>>> ${component} >>>>>`);
 
   const listItem = await driver.findElementByText(component);
   await listItem.tap();
@@ -56,7 +56,7 @@ const screenshotComponent = async (driver, component) => {
   }
 
   if (!fs.existsSync(`screenshots/${argv.runType}`)) {
-    await fs.mkdir(`screenshots/${argv.runType}`);
+    fs.mkdirSync(`screenshots/${argv.runType}`);
   }
 
   await driver.takeScreenshot(`screenshots/${argv.runType}/${component}.png`);
