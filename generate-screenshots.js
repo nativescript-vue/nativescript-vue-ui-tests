@@ -23,7 +23,16 @@ const components = [
   'WebView',
 ];
 
+const makeDir = (path) => {
+  if (!fs.existsSync(path)) {
+    fs.mkdirSync(path);
+  }
+};
+
 (async function () {
+  makeDir('screenshots');
+  makeDir(`screenshots/${argv.runType}`);
+
   AppiumDriver.createAppiumDriver(4723, {
     isSauceLab: argv.sauceLab || false,
     runType: argv.runType,
@@ -53,10 +62,6 @@ const screenshotComponent = async (driver, component) => {
 
   if (component === 'HtmlView' || component === 'WebView') {
     await driver._driver.sleep(4000);
-  }
-
-  if (!fs.existsSync(`screenshots/${argv.runType}`)) {
-    fs.mkdirSync(`screenshots/${argv.runType}`);
   }
 
   await driver.takeScreenshot(`screenshots/${argv.runType}/${component}.png`);

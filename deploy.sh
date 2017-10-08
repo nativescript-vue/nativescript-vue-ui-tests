@@ -8,4 +8,4 @@ git add -f screenshots
 git commit --message "Travis deploy: $TRAVIS_BUILD_NUMBER"
 
 git remote add origin-pages https://${GITHUB_TOKEN}@github.com/rigor789/nativescript-vue-ui-tests.git > /dev/null 2>&1
-git push --quiet --set-upstream origin-pages gh-pages
+git push --quiet --set-upstream --force origin-pages gh-pages
