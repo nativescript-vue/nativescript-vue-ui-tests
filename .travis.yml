@@ -38,6 +38,13 @@ install:
   - tns usage-reporting disable
   - tns error-reporting disable
 
+# Deploy Screenshots to GH Pages after a build
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: 'screenshots'
+
 # The build matrix
 matrix:
   include:
