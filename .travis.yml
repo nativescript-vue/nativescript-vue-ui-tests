@@ -73,7 +73,8 @@ matrix:
       script:
         - npm install -g appium
         - npm install
-        - travis_retry npm run appium --runType=android23 --sauceLab=true --appLocation=$ANDROID_PACKAGE
+        - appium &
+        - travis_retry npm run appium -- --runType=android23 --sauceLab=true --appPath=$ANDROID_PACKAGE
     - os: linux
       env:
         - iOS="10"
@@ -82,4 +83,5 @@ matrix:
       script:
         - npm install -g appium
         - npm install
-        - travis_wait travis_retry npm run appium --runType=ios-simulator103iPhone6 --sauceLab=true --appLocation=$IOS_PACKAGE
+        - appium &
+        - travis_wait travis_retry npm run appium -- --runType=ios-simulator103iPhone6 --sauceLab=true --appPath=$IOS_PACKAGE

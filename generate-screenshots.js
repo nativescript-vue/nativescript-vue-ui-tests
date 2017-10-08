@@ -1,59 +1,67 @@
-require('yargs').config({
-  //runType: 'android23',
-  appiumCapsLocation: 'appium.capabilities.json'
-});
+const argv = require('yargs').argv;
+const AppiumDriver = require('nativescript-dev-appium/lib/appium-driver').AppiumDriver;
+const fs = require('fs');
 
-const { startServer, stopServer, createDriver } = require('nativescript-dev-appium');
+const components = [
+  'ActivityIndicator',
+  'Button',
+  'DatePicker',
+  'HtmlView',
+  'Image',
+  'Label',
+  'ListPicker',
+  'ListView',
+  'Progress',
+  'SearchBar',
+  'SegmentedBar',
+  'Slider',
+  'Switch',
+  'TabView',
+  'TextField',
+  'TextView',
+  'TimePicker',
+  'WebView',
+];
 
-const run = async () => {
-  await startServer();
-  const driver = await createDriver();
+(async function () {
+  AppiumDriver.createAppiumDriver(4723, {
+    isSauceLab: argv.sauceLab || false,
+    runType: argv.runType,
+    appPath: argv.appPath, //'nativescriptvueuitests-debug.apk',
+    appiumCaps: require('./appium.capabilities.json')[argv.runType],
+    verbose: argv.verbose || false,
+  })
+    .then(driver => run(driver))
+    .then(() => console.log('Buh-Bye...'))
+    .catch((err) => console.log(err));
+})();
 
-  await [
-    'ActivityIndicator',
-    'Button',
-    'DatePicker',
-    'HtmlView',
-    'Image',
-    'Label',
-    'ListPicker',
-    'ListView',
-    'Progress',
-    'SearchBar',
-    'SegmentedBar',
-    'Slider',
-    'Switch',
-    'TabView',
-    'TextField',
-    'TextView',
-    'TimePicker',
-    'WebView',
-  ].forEach(async (component) => {
-    const listItem = await driver.findElementByText(component);
-    await listItem.tap();
-
-    await driver._driver.sleep(500);
-
-    if (component === 'HtmlView' || component === 'WebView') {
-      await driver._driver.sleep(4000);
-    }
-
-    await driver.takeScreenshot(`screenshots/${component}.png`);
-
-    await driver.navBack();
-
-    if (component === 'SearchBar') {
-      await driver.navBack();
-    }
-  });
-
+const run = async (driver) => {
+  for (let component of components) {
+    await screenshotComponent(driver, component)
+  }
   await driver.quit();
-  await stopServer();
 };
 
-run().then(() => {
-  console.log('Buh-bye...');
-}).catch((err) => {
-  console.log('Something isn\'t quite right... :(');
-  console.error(err);
-});
+const screenshotComponent = async (driver, component) => {
+  console.log(`>>>>> ${component} >>>>>`);
+
+  const listItem = await driver.findElementByText(component);
+  await listItem.tap();
+
+  await driver._driver.sleep(500);
+
+  if (component === 'HtmlView' || component === 'WebView') {
+    await driver._driver.sleep(4000);
+  }
+
+  if (!fs.existsSync(`screenshots/${argv.runType}`)) {
+    await fs.mkdir(`screenshots/${argv.runType}`);
+  }
+
+  await driver.takeScreenshot(`screenshots/${argv.runType}/${component}.png`);
+  await driver.navBack();
+  if (component === 'SearchBar') {
+    await driver.navBack();
+  }
+};
