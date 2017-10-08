@@ -1,8 +1,8 @@
 module.exports = {
     template: `
-        <StackLayout>
+        <GridLayout rows="auto">
             <WebView :src="src"/>
-        </StackLayout>
+        </GridLayout>
     `,
 
     data() {

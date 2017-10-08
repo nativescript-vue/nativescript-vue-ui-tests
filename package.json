@@ -13,42 +13,18 @@
     }
   },
   "dependencies": {
+    "appium": "^1.7.1",
     "nativescript-dev-appium": "^3.1.0-2017-10-6-1",
     "nativescript-vue": "^0.1.12",
     "tns-core-modules": "^3.2.0",
     "yargs": "^9.0.1"
   },
-  "devDependencies": {
-    "appium": "^1.7.1",
-    "babel-traverse": "6.26.0",
-    "babel-types": "6.26.0",
-    "babylon": "6.18.0",
-    "jest": "^21.2.1",
-    "lazy": "1.0.11",
-    "wd": "^1.4.1",
-    "chai": "~4.1.1",
-    "mocha": "~3.5.0",
-    "mocha-junit-reporter": "^1.13.0",
-    "mocha-multi": "^0.11.0",
-    "chai-as-promised": "~7.1.1"
-  },
   "scripts": {
-    "test": "jest",
     "appium": "node generate-screenshots.js",
     "ci.android.build": "tns build android",
     "ci.android.screenshots": "npm run appium --runtype=android23 --sauceLab=true",
     "ci.ios.build": "tns build ios",
     "ci.ios.screenshots": "npm run appium --runtype=ios-simulator103iPhone6 --sauceLab=true",
-    "e2e": "mocha --opts ./e2e/config/mocha.opts",
     "deploy": "bash deploy.sh"
-  },
-  "jest": {
-    "testPathIgnorePatterns": [
-      "/platforms/",
-      "/node_modules/"
-    ],
-    "modulePathIgnorePatterns": [
-      "/platforms/"
-    ]
   }
 }

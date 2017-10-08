@@ -1,7 +1,7 @@
 module.exports = {
     template: `
-        <StackLayout>
+        <GridLayout rows="auto">
             <Image src="res://icon" stretch="none"/>
-        </StackLayout>
+        </GridLayout>
     `
 };

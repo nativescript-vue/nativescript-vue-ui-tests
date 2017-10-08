@@ -66,7 +66,7 @@ const screenshotComponent = async (driver, component) => {
 
   await driver.takeScreenshot(`screenshots/${argv.runType}/${component}.png`);
   await driver.navBack();
-  if (component === 'SearchBar') {
+  if (component === 'SearchBar' && argv.runType.toLowerCase().indexOf('android') > -1) {
     await driver.navBack();
   }
 };
