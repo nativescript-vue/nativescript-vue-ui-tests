@@ -65,12 +65,6 @@ matrix:
         - echo $SAUCE_USER:$SAUCE_KEY
         - "curl -u $SAUCE_USER:$SAUCE_KEY -X POST -H 'Content-Type: application/octet-stream' $IOS_SAUCE_STORAGE --data-binary @$IOS_PACKAGE_FOLDER/$IOS_PACKAGE"
     - stage: "Screenshots"
-      # Deploy Screenshots to GH Pages after a build
-      deploy:
-        provider: pages
-        skip_cleanup: true
-        github_token: $GITHUB_TOKEN
-        local_dir: 'screenshots'
       env:
       - Android="23"
       language: node_js
@@ -81,6 +75,7 @@ matrix:
         - npm install
         - appium &
         - travis_retry npm run appium -- --runType=android23 --sauceLab=true --appPath=$ANDROID_PACKAGE
+        - npm run deploy
     - os: linux
       env:
         - iOS="10"
@@ -91,3 +86,4 @@ matrix:
         - npm install
         - appium &
         - travis_wait travis_retry npm run appium -- --runType=ios-simulator103iPhone6 --sauceLab=true --appPath=$IOS_PACKAGE
+        - npm run deploy

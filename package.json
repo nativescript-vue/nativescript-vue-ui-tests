@@ -39,7 +39,8 @@
     "ci.android.screenshots": "npm run appium --runtype=android23 --sauceLab=true",
     "ci.ios.build": "tns build ios",
     "ci.ios.screenshots": "npm run appium --runtype=ios-simulator103iPhone6 --sauceLab=true",
-    "e2e": "mocha --opts ./e2e/config/mocha.opts"
+    "e2e": "mocha --opts ./e2e/config/mocha.opts",
+    "deploy": "bash deploy.sh"
   },
   "jest": {
     "testPathIgnorePatterns": [
