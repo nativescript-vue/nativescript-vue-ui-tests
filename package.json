@@ -26,5 +26,11 @@
     "ci.ios.build": "tns build ios",
     "ci.ios.screenshots": "npm run appium --runtype=ios-simulator103iPhone6 --sauceLab=true",
     "deploy": "bash deploy.sh"
+  },
+  "devDependencies": {
+    "babel-traverse": "6.26.0",
+    "babel-types": "6.26.0",
+    "babylon": "6.18.0",
+    "lazy": "1.0.11"
   }
 }

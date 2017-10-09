@@ -1,6 +1,6 @@
 module.exports = {
     template: `
-        <GridLayout rows="auto">
+        <GridLayout rows="*">
             <WebView :src="src"/>
         </GridLayout>
     `,
@@ -12,9 +12,9 @@ module.exports = {
                 <html>
                     <body>
                         <h1>WebView</h1>
-                        
+
                         <p>And a paragraph...</p>
-                        
+
                         <select>
                             <option value="yes">Yes</option>
                             <option value="no">No</option>
