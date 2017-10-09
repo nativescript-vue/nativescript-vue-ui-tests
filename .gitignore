@@ -1,3 +1,4 @@
 package-lock.json
 node_modules
 platforms/
+app/tns_modules/

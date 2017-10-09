@@ -1,6 +1,6 @@
 module.exports = {
     template: `
-        <GridLayout rows="auto">
+        <GridLayout rows="*">
             <TabView>
                 <TabViewItem title="First">
                     <Label text="First" />
