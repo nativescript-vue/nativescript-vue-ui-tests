@@ -34,7 +34,7 @@ cache:
 
 # Install steps (Install nativescript and disable reporting)
 install:
-  - npm install -g nativescript
+  - npm install -g nativescript --ignore-scripts
   - tns usage-reporting disable
   - tns error-reporting disable
 
