@@ -21,6 +21,11 @@ const components = [
   'TextView',
   'TimePicker',
   'WebView',
+  'ActionDialog',
+  'AlertDialog',
+  'ConfirmDialog',
+  'LoginDialog',
+  'PromptDialog',
 ];
 
 const makeDir = (path) => {
@@ -66,7 +71,7 @@ const screenshotComponent = async (driver, component) => {
 
   await driver.takeScreenshot(`screenshots/${argv.runType}/${component}.png`);
   await driver.navBack();
-  if (component === 'SearchBar' && argv.runType.toLowerCase().indexOf('android') > -1) {
+  if ((component === 'SearchBar' || component.includes('Dialog')) && argv.runType.toLowerCase().indexOf('android') > -1) {
     await driver.navBack();
   }
 };

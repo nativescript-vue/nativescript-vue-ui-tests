@@ -75,6 +75,26 @@ new Vue({
                 name: 'WebView',
                 component: () => require('./elements/components/WebView')
             },
+            {
+                name: 'ActionDialog',
+                component: () => require('./elements/dialogs/Action')
+            },
+            {
+                name: 'AlertDialog',
+                component: () => require('./elements/dialogs/Alert')
+            },
+            {
+                name: 'ConfirmDialog',
+                component: () => require('./elements/dialogs/Confirm')
+            },
+            {
+              name: 'LoginDialog',
+              component: () => require('./elements/dialogs/Login')
+            },
+            {
+              name: 'PromptDialog',
+              component: () => require('./elements/dialogs/Prompt')
+            },
         ]
     },
 
