@@ -6,17 +6,17 @@
   "nativescript": {
     "id": "org.nativescript.nativescriptvueuitests",
     "tns-android": {
-      "version": "3.2.0"
+      "version": "3.4.0"
     },
     "tns-ios": {
-      "version": "3.2.0"
+      "version": "3.4.0"
     }
   },
   "dependencies": {
     "appium": "^1.7.1",
     "nativescript-dev-appium": "^3.1.0-2017-10-6-1",
-    "nativescript-vue": "^0.1.12",
-    "tns-core-modules": "^3.2.0",
+    "nativescript-vue": "^0.7.10",
+    "tns-core-modules": "^3.4.0",
     "yargs": "^9.0.1"
   },
   "scripts": {

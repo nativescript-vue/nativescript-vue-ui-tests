@@ -63,7 +63,7 @@ const screenshotComponent = async (driver, component) => {
   const listItem = await driver.findElementByText(component);
   await listItem.tap();
 
-  await driver._driver.sleep(500);
+  await driver._driver.sleep(1000);
 
   if (component === 'HtmlView' || component === 'WebView') {
     await driver._driver.sleep(4000);
@@ -71,7 +71,12 @@ const screenshotComponent = async (driver, component) => {
 
   await driver.takeScreenshot(`screenshots/${argv.runType}/${component}.png`);
   await driver.navBack();
-  if ((component === 'SearchBar' || component.includes('Dialog')) && argv.runType.toLowerCase().indexOf('android') > -1) {
+
+  if(component.includes('Dialog')) {
+    await driver.navBack();
+  }
+
+  if (component === 'SearchBar' && argv.runType.toLowerCase().indexOf('android') > -1) {
     await driver.navBack();
   }
 };

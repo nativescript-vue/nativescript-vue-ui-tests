@@ -108,10 +108,10 @@ new Vue({
 
     template: `
         <Page>
-            <ListView :items="elements" @itemTap="showElement">
-                <template scope="el">
+            <ListView for="el in elements" @itemTap="showElement">
+                <v-template>
                     <Label :text="el.name" style="font-size: 15;" />
-                </template>
+                </v-template>
             </ListView>
         </Page>
     `,
