@@ -1,6 +1,6 @@
 module.exports = {
     template: `
-        <GridLayout rows="auto">
+        <GridLayout rows="auto" class="m-20">
             <Image src="res://icon" stretch="none"/>
         </GridLayout>
     `

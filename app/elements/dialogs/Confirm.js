@@ -1,7 +1,7 @@
-const dialogs = require('ui/dialogs');
+const dialogs = require('tns-core-modules/ui/dialogs');
 
 module.exports = {
-  mounted() {
-    dialogs.confirm('Are you ready?')
-  }
+    mounted() {
+        setTimeout(() => dialogs.confirm('Are you ready?'))
+    }
 };

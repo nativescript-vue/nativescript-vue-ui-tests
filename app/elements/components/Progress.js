@@ -1,7 +1,7 @@
 module.exports = {
     template: `
         <StackLayout>
-            <Progress value="50"/>
+            <Progress value="20" maxValue="50"/>
         </StackLayout>
     `
 };
