@@ -1,6 +1,6 @@
 module.exports = {
     template: `
-        <StackLayout>
+        <StackLayout class="m-20">
             <TextField text="TextField" />
         </StackLayout>
     `

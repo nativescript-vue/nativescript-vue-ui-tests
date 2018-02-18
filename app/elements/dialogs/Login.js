@@ -1,7 +1,7 @@
-const dialogs = require('ui/dialogs');
+const dialogs = require('tns-core-modules/ui/dialogs');
 
 module.exports = {
-  mounted() {
-    dialogs.login('Please log in', 'Username', 'Password')
-  }
+    mounted() {
+        setTimeout(() => dialogs.login('Please log in', 'Username', 'Password'))
+    }
 };

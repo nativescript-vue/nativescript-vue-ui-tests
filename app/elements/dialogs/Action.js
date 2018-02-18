@@ -1,7 +1,7 @@
-const dialogs = require('ui/dialogs');
+const dialogs = require('tns-core-modules/ui/dialogs');
 
 module.exports = {
-  mounted() {
-    dialogs.action('Choose one!', 'Or cancel...', ['cheese', 'wine'])
-  }
+    mounted() {
+        setTimeout(() => dialogs.action('Choose one!', 'Or cancel...', ['cheese', 'wine']))
+    }
 };

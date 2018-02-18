@@ -88,31 +88,29 @@ new Vue({
                 component: () => require('./elements/dialogs/Confirm')
             },
             {
-              name: 'LoginDialog',
-              component: () => require('./elements/dialogs/Login')
+                name: 'LoginDialog',
+                component: () => require('./elements/dialogs/Login')
             },
             {
-              name: 'PromptDialog',
-              component: () => require('./elements/dialogs/Prompt')
+                name: 'PromptDialog',
+                component: () => require('./elements/dialogs/Prompt')
             },
         ]
     },
 
 
     methods: {
-        showElement(e) {
-            const element = e.item;
+        showElement(element) {
             this.$navigateTo(element.component())
         }
     },
 
     template: `
         <Page>
-            <ListView for="el in elements" @itemTap="showElement">
-                <v-template>
-                    <Label :text="el.name" style="font-size: 15;" />
-                </v-template>
-            </ListView>
+            <ActionBar title="Home"></ActionBar>
+            <WrapLayout class="m-5 home-list">
+                <Button :text="el.name" v-for="el in elements" @tap="showElement(el)" />
+            </WrapLayout>
         </Page>
     `,
 }).$start();

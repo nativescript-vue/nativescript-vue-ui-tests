@@ -1,7 +1,7 @@
 module.exports = {
     template: `
-        <StackLayout>
-            <Slider value="50"/>
+        <StackLayout class="m-20">
+            <Slider value="60"/>
         </StackLayout>
     `
 };

@@ -1,7 +1,7 @@
 module.exports = {
     template: `
-        <StackLayout>
-            <Switch />
+        <StackLayout class="m-20">
+            <Switch checked="true"/>
         </StackLayout>
     `
 };

@@ -1,17 +1,17 @@
 {
   "android23": {
-    "browserName": "",
     "platformName": "Android",
     "platformVersion": "6.0",
     "deviceName": "Android Emulator",
     "noReset": false,
-    "app": ""
+    "appPackage": "org.nativescript.nativescriptvueuitests",
+    "appActivity": "com.tns.NativeScriptActivity"
   },
   "ios-simulator103iPhone6": {
-    "browserName": "",
     "platformName": "iOS",
     "platformVersion": "10.3",
-    "deviceName": "iPhone 6 Simulator",
+    "deviceName": "iPhone Simulator",
+    "bundleId": "org.nativescript.nativescriptvueuitests",
     "app": ""
   }
 }
