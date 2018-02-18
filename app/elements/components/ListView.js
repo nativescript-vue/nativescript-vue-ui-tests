@@ -1,20 +1,18 @@
 module.exports = {
     template: `
-        <StackLayout>
-            <ListView :items="items">
-                <template scope="item">
-                    <Label :text="item.value"/>
-                </template>
-            </ListView>
-        </StackLayout>
+        <ListView for="item in items">
+            <v-template>
+                <Label :text="item.text"/>
+            </v-template>
+        </ListView>
     `,
 
     data() {
         return {
             items: [
-                'First',
-                'Second',
-                'Third'
+                {text: 'First'},
+                {text: 'Second'},
+                {text: 'Third'}
             ]
         }
     }
