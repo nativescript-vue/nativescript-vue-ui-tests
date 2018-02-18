@@ -1,8 +1,8 @@
 module.exports = {
     template: `
-        <ListView :items="items">
-            <v-template scope="item">
-                <Label :text="item.value"/>
+        <ListView for="item in items">
+            <v-template>
+                <Label :text="item.text"/>
             </v-template>
         </ListView>
     `,
@@ -10,9 +10,9 @@ module.exports = {
     data() {
         return {
             items: [
-                {value: 'First'},
-                {value: 'Second'},
-                {value: 'Third'}
+                {text: 'First'},
+                {text: 'Second'},
+                {text: 'Third'}
             ]
         }
     }
