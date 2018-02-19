@@ -28,7 +28,7 @@
     "deploy": "bash deploy.sh",
     "e2e": "mocha --opts ./e2e/config/mocha.opts",
     "ios.build": "tns build ios",
-    "ios.screenshots": "npm run appium -- --runType=ios-simulator103iPhone6 --sauceLab=true"
+    "ios.screenshots": "npm run appium -- --runType=ios-simulator103iPhone6"
   },
   "devDependencies": {
     "babel-traverse": "6.26.0",

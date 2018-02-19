@@ -7,7 +7,7 @@ component screenshots at [nativescript-vue.org](https://nativescript-vue.org/).
 * The [Appium](http://appium.io/) client. Just download and install the latest [from GitHub](https://github.com/appium/appium-desktop/releases/latest).
 
 ## Running the tests locally
-Start Appium, or you'll receive an error `127.0.0.1` can't be reached.
+Start Appium and press 'Start the server', or you'll receive an error `127.0.0.1:4723` can't be reached.
 
 ### Android
 ```bash
