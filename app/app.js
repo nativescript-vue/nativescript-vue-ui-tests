@@ -40,6 +40,10 @@ new Vue({
                 component: () => require('./elements/components/Progress')
             },
             {
+                name: 'ScrollView',
+                component: () => require('./elements/components/ScrollView')
+            },
+            {
                 name: 'SearchBar',
                 component: () => require('./elements/components/SearchBar')
             },

@@ -12,6 +12,7 @@ const components = [
     'ListPicker',
     'ListView',
     'Progress',
+    'ScrollView',
     'SearchBar',
     'SegmentedBar',
     'Slider',
