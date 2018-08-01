@@ -110,11 +110,13 @@ new Vue({
     },
 
     template: `
+    <Frame>
         <Page>
             <ActionBar title="Home"></ActionBar>
             <WrapLayout class="m-5 home-list">
                 <Button :text="el.name" v-for="el in elements" @tap="showElement(el)" />
             </WrapLayout>
         </Page>
+    </Frame>
     `,
 }).$start();
