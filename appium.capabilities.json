@@ -1,6 +1,6 @@
 {
   "android23": {
-    "automationName": "UiAutomator2",
+    "automationName": "appium",
     "platformName": "Android",
     "platformVersion": "6.0",
     "deviceName": "Android Emulator",
@@ -10,7 +10,7 @@
     "appActivity": "com.tns.NativeScriptActivity"
   },
   "ios-simulator103iPhone6": {
-    "automationName": "UiAutomator2",
+    "automationName": "appium",
     "platformName": "iOS",
     "platformVersion": "10.3",
     "deviceName": "iPhone Simulator",
