@@ -27,7 +27,7 @@ Start the tests:
 
 ```bash
 npm run android.build
-adb install platforms/android/app/build/outputs/apk/nativescriptvueuitests-debug.apk
+adb install ./platforms/android/app/build/outputs/apk/debug/app-debug.apk
 npm run android.screenshots
 ```
 
