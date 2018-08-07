@@ -13,5 +13,15 @@
     "deviceName": "iPhone Simulator",
     "bundleId": "org.nativescript.nativescriptvueuitests",
     "app": ""
+  },
+  "sim.iPhone8.iOS11.3": {
+    "platformName": "iOS",
+    "platformVersion": "11.3",
+    "deviceName": "iPhone 8",
+    "appiumVersion": "1.8.1",
+    "bundleId": "org.nativescript.nativescriptvueuitests",
+    "noReset": true,
+    "fullReset": false,
+    "app": ""
   }
 }

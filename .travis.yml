@@ -53,9 +53,9 @@ matrix:
         - "curl -u $SAUCE_USER:$SAUCE_KEY -X POST -H 'Content-Type: application/octet-stream' $ANDROID_SAUCE_STORAGE --data-binary @$ANDROID_PACKAGE_FOLDER/$ANDROID_PACKAGE"
     - os: osx
       env:
-        - BuildiOS="10.3"
-        - Xcode="8.3"
-      osx_image: xcode8.3
+        - BuildiOS="11"
+        - Xcode="9.3"
+      osx_image: xcode9.3
       language: node_js
       node_js: "8"
       jdk: oraclejdk8
@@ -73,17 +73,15 @@ matrix:
       script:
         - npm install -g appium
         - npm install
-        - appium &
-        - travis_retry npm run appium -- --runType=android23 --sauceLab=true --appPath=$ANDROID_PACKAGE
+        - travis_retry npm run ci.android --appPath $ANDROID_PACKAGE
         - npm run deploy
     - os: linux
       env:
-        - iOS="10"
+        - iOS="11"
       language: node_js
       node_js: "8"
       script:
         - npm install -g appium
         - npm install
-        - appium &
-        - travis_wait travis_retry npm run appium -- --runType=ios-simulator103iPhone6 --sauceLab=true --appPath=$IOS_PACKAGE
+        - travis_wait travis_retry npm run e2e.ios --appPath $IOS_PACKAGE
         - npm run deploy
