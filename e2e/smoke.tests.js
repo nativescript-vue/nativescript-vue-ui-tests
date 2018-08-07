@@ -10,7 +10,7 @@ afterEach(`navigate back to main page`, async () => {
     await driver.navBack();
 });
 
-after('quit test', () => {
+after('quit test', async () => {
     await driver.quit();
     console.log('Buh-Bye...');
 });
