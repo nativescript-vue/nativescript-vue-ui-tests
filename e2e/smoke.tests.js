@@ -2,15 +2,15 @@ const assert = require("chai").assert;
 const nsAppium = require("nativescript-dev-appium");
 
 let driver;
-before("start test, create driver", async () => {
+before("reate driver", async () => {
     driver = await nsAppium.createDriver();
 });
 
-afterEach(`navigate back to main page`, async () => {
+afterEach(`navigate back to main page after test`, async () => {
     await driver.navBack();
 });
 
-after('quit test', async () => {
+after('quit driver', async () => {
     await driver.quit();
     console.log('Buh-Bye...');
 });
@@ -43,7 +43,7 @@ describe("components", async () => {
             await loadComponent(component);
 
             const result = await driver.compareScreen(component, 10, 0.1);
-            assert.isTrue(result, "Image comparisson failed");
+            assert.isTrue(result, "Image comparisson has failed!");
 
             if (component === 'SearchBar' && driver.isAndroid) {
                 await driver.navBack();
