@@ -2,8 +2,7 @@ const Vue = require('nativescript-vue');
 
 new Vue({
     data: {
-        elements: [
-            {
+        elements: [{
                 name: 'ActivityIndicator',
                 component: () => require('./elements/components/ActivityIndicator')
             },
@@ -99,6 +98,10 @@ new Vue({
                 name: 'PromptDialog',
                 component: () => require('./elements/dialogs/Prompt')
             },
+            {
+                name: 'SideDrawer',
+                component: () => require('./elements/components/SideDrawer')
+            }
         ]
     },
 

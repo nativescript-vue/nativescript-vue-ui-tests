@@ -15,6 +15,7 @@
   "dependencies": {
     "appium": "^1.7.1",
     "nativescript-dev-appium": "^3.1.0-2017-10-6-1",
+    "nativescript-ui-sidedrawer": "^5.1.0",
     "nativescript-vue": "^1.0.0",
     "tns-core-modules": "~3.4.0",
     "yargs": "^9.0.1"
