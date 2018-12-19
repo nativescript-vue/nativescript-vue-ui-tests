@@ -27,6 +27,7 @@ const components = [
     'ConfirmDialog',
     'LoginDialog',
     'PromptDialog',
+    'SideDrawer',
 ];
 
 const makeDir = (path) => {
@@ -40,12 +41,12 @@ const makeDir = (path) => {
     makeDir(`screenshots/${argv.runType}`);
 
     AppiumDriver.createAppiumDriver(4723, {
-        isSauceLab: argv.sauceLab || false,
-        runType: argv.runType,
-        appPath: argv.appPath, //'nativescriptvueuitests-debug.apk',
-        appiumCaps: require('./appium.capabilities.json')[argv.runType],
-        verbose: argv.verbose || false,
-    })
+            isSauceLab: argv.sauceLab || false,
+            runType: argv.runType,
+            appPath: argv.appPath, //'nativescriptvueuitests-debug.apk',
+            appiumCaps: require('./appium.capabilities.json')[argv.runType],
+            verbose: argv.verbose || false,
+        })
         .then(driver => run(driver))
         .then(() => console.log('Buh-Bye...'))
         .catch((err) => console.log(err));
