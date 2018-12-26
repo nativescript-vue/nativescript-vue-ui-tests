@@ -2,7 +2,7 @@ const assert = require("chai").assert;
 const nsAppium = require("nativescript-dev-appium");
 
 let driver;
-before("reate driver", async () => {
+before("create driver", async () => {
     driver = await nsAppium.createDriver();
 });
 
