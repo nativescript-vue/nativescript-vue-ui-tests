@@ -1,7 +1,7 @@
 module.exports = {
     template: `
         <StackLayout class="m-20">
-            <DatePicker/>
+            <DatePicker automationText="DatePicker" />
         </StackLayout>
     `
 };
