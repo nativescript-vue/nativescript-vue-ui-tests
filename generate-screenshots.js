@@ -1,8 +1,8 @@
 const argv = require('yargs').argv;
 const AppiumDriver = require('nativescript-dev-appium').AppiumDriver;
 const DeviceManager = require('nativescript-dev-appium').DeviceManager;
+const NsCapabilities = require('nativescript-dev-appium/lib/ns-capabilities').NsCapabilities;
 const fs = require('fs');
-
 const components = [
     'ActivityIndicator',
     'Button',
@@ -41,13 +41,15 @@ const makeDir = (path) => {
     makeDir(`screenshots/${argv.runType}`);
 
     const appiumCaps = require('./appium.capabilities.json')[argv.runType];
-    let args = {
+    let args = new NsCapabilities({
+      port: 4723,
       isSauceLab: argv.sauceLab || false,
       runType: argv.runType,
       appPath: argv.appPath, //'nativescriptvueuitests-debug.apk',
       appiumCaps: appiumCaps,
       verbose: argv.verbose || false,
-    }
+      validateArgs: () => {},
+    })
     // Hack to fix a `Cannot read property 'token' of undefined` error
     // See https://github.com/NativeScript/nativescript-dev-appium/issues/142
     if (args.isAndroid) {
@@ -56,7 +58,7 @@ const makeDir = (path) => {
         args.device = DeviceManager.getDefaultDevice(args);
     }
 
-    AppiumDriver.createAppiumDriver(4723, args)
+    AppiumDriver.createAppiumDriver(args)
         .then(driver => run(driver))
         .then(() => console.log('Buh-Bye...'))
         .catch((err) => console.log(err));
