@@ -22,8 +22,8 @@
   "scripts": {
     "appium": "node generate-screenshots.js",
     "android.build": "tns build android --bundle",
-    "android.screenshots": "npm run appium -- --runType=android28",
-    "ci.android.screenshots": "npm run appium -- --runType=android28 --sauceLab=true",
+    "android.screenshots": "npm run appium -- --runType=android23",
+    "ci.android.screenshots": "npm run appium -- --runType=android23 --sauceLab=true",
     "ci.ios.screenshots": "npm run appium -- --runType=ios-simulator103iPhone6",
     "deploy": "bash deploy.sh",
     "e2e": "mocha --opts ./e2e/config/mocha.opts",

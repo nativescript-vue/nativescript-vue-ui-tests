@@ -1,5 +1,5 @@
 {
-  "android28": {
+  "android23": {
     "automationName": "appium",
     "platformName": "Android",
     "deviceName": "Nexus_5X_API_28",
