@@ -1,7 +1,9 @@
 module.exports = {
-    template: `
-        <StackLayout class="m-20">
-            <TextField text="TextField" />
-        </StackLayout>
-    `
+  template: `
+    <Page>
+      <StackLayout class="m-20">
+        <TextField text="TextField" />
+      </StackLayout>
+    </Page>
+  `
 };

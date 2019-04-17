@@ -1,7 +1,9 @@
 module.exports = {
-    template: `
-        <StackLayout class="m-20">
-            <TimePicker />
-        </StackLayout>
-    `
+  template: `
+    <Page>
+      <StackLayout class="m-20">
+        <TimePicker />
+      </StackLayout>
+    </Page>
+  `
 };

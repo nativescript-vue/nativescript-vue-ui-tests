@@ -1,17 +1,19 @@
 module.exports = {
-    template: `
-        <StackLayout class="m-20">
+  template: `
+    <Page>
+      <StackLayout class="m-20">
             <HtmlView :html="html"/>
-        </StackLayout>
-    `,
+      </StackLayout>
+    </Page>
+  `,
 
-    data() {
-        return {
-            html: `
+  data() {
+    return {
+      html: `
                 <div>
                     <h1>HtmlView</h1>
                 </div>
             `
-        }
-    }
+    };
+  }
 };

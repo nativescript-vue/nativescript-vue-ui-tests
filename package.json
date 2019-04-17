@@ -6,28 +6,28 @@
   "nativescript": {
     "id": "org.nativescript.nativescriptvueuitests",
     "tns-ios": {
-      "version": "4.1.0"
+      "version": "5.3.1"
     },
     "tns-android": {
-      "version": "4.1.3"
+      "version": "5.3.1"
     }
   },
   "dependencies": {
-    "appium": "^1.8.1",
-    "nativescript-dev-appium": "^4.0.0",
-    "nativescript-vue": "^2.0.0-alpha.1",
-    "tns-core-modules": "^4.1.1",
+    "appium": "^1.12.1",
+    "nativescript-dev-appium": "^5.2.0",
+    "nativescript-vue": "^2.2.0",
+    "tns-core-modules": "^5.3.1",
     "yargs": "^9.0.1"
   },
   "scripts": {
     "appium": "node generate-screenshots.js",
-    "android.build": "tns build android",
+    "android.build": "tns build android --bundle",
     "android.screenshots": "npm run appium -- --runType=android23",
     "ci.android.screenshots": "npm run appium -- --runType=android23 --sauceLab=true",
     "ci.ios.screenshots": "npm run appium -- --runType=ios-simulator103iPhone6",
     "deploy": "bash deploy.sh",
     "e2e": "mocha --opts ./e2e/config/mocha.opts",
-    "ios.build": "tns build ios",
+    "ios.build": "tns build ios --bundle",
     "ios.screenshots": "npm run appium -- --runType=ios-simulator103iPhone6"
   },
   "devDependencies": {
@@ -37,6 +37,12 @@
     "lazy": "1.0.11",
     "@types/chai": "^4.0.2",
     "@types/mocha": "^2.2.41",
-    "@types/node": "^7.0.5"
+    "@types/node": "^7.0.5",
+    "@babel/core": "~7.1.0",
+    "@babel/preset-env": "~7.1.0",
+    "babel-loader": "^8.0.5",
+    "nativescript-dev-webpack": "^0.21.0",
+    "nativescript-vue-template-compiler": "~2.2.0",
+    "vue-loader": "~15.4.0"
   }
 }
