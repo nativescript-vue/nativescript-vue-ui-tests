@@ -6,17 +6,17 @@
   "nativescript": {
     "id": "org.nativescript.nativescriptvueuitests",
     "tns-ios": {
-      "version": "3.4.1"
+      "version": "4.1.0"
     },
     "tns-android": {
-      "version": "3.4.1"
+      "version": "4.1.3"
     }
   },
   "dependencies": {
-    "appium": "^1.7.1",
-    "nativescript-dev-appium": "^3.1.0-2017-10-6-1",
-    "nativescript-vue": "^1.0.0",
-    "tns-core-modules": "~3.4.0",
+    "appium": "^1.8.1",
+    "nativescript-dev-appium": "^4.0.0",
+    "nativescript-vue": "^2.0.0-alpha.1",
+    "tns-core-modules": "^4.1.1",
     "yargs": "^9.0.1"
   },
   "scripts": {
@@ -34,6 +34,9 @@
     "babel-traverse": "6.26.0",
     "babel-types": "6.26.0",
     "babylon": "6.18.0",
-    "lazy": "1.0.11"
+    "lazy": "1.0.11",
+    "@types/chai": "^4.0.2",
+    "@types/mocha": "^2.2.41",
+    "@types/node": "^7.0.5"
   }
 }

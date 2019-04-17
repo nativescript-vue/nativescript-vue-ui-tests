@@ -1,15 +1,18 @@
 {
   "android23": {
+    "automationName": "appium",
     "platformName": "Android",
     "platformVersion": "6.0",
     "deviceName": "Android Emulator",
     "noReset": false,
+    "avd": "Nexus_5X_API_27",
     "appPackage": "org.nativescript.nativescriptvueuitests",
     "appActivity": "com.tns.NativeScriptActivity"
   },
   "ios-simulator103iPhone6": {
+    "automationName": "appium",
     "platformName": "iOS",
-    "platformVersion": "10.3",
+    "platformVersion": "11.4",
     "deviceName": "iPhone Simulator",
     "bundleId": "org.nativescript.nativescriptvueuitests",
     "app": ""
