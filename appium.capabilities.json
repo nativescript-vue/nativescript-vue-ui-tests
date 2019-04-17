@@ -1,11 +1,10 @@
 {
-  "android23": {
+  "android28": {
     "automationName": "appium",
     "platformName": "Android",
-    "platformVersion": "6.0",
-    "deviceName": "Android Emulator",
+    "deviceName": "Nexus_5X_API_28",
     "noReset": false,
-    "avd": "Nexus_5X_API_27",
+    "avd": "Nexus_5X_API_28",
     "appPackage": "org.nativescript.nativescriptvueuitests",
     "appActivity": "com.tns.NativeScriptActivity"
   },
