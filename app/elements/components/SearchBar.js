@@ -1,7 +1,9 @@
 module.exports = {
-    template: `
-        <StackLayout>
-            <SearchBar />
-        </StackLayout>
-    `
+  template: `
+    <Page>
+      <StackLayout>
+        <SearchBar />
+      </StackLayout>
+    </Page>
+  `
 };

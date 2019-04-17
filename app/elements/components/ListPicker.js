@@ -1,17 +1,15 @@
 module.exports = {
-    template: `
-        <StackLayout class="m-20">
-            <ListPicker :items="items"></ListPicker>
-        </StackLayout>
+  template: `
+    <Page>
+      <StackLayout class="m-20">
+        <ListPicker :items="items"></ListPicker>
+      </StackLayout>
+    </Page>
     `,
 
-    data() {
-        return {
-            items: [
-                'First',
-                'Second',
-                'Third'
-            ]
-        }
-    }
+  data() {
+    return {
+      items: ["First", "Second", "Third"]
+    };
+  }
 };
