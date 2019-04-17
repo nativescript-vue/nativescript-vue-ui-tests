@@ -12,8 +12,8 @@
   "ios-simulator103iPhone6": {
     "automationName": "appium",
     "platformName": "iOS",
-    "platformVersion": "11.4",
-    "deviceName": "iPhone Simulator",
+    "platformVersion": "12.1",
+    "deviceName": "iPhone 6",
     "bundleId": "org.nativescript.nativescriptvueuitests",
     "app": ""
   }
